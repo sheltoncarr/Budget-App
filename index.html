@@ -11,26 +11,60 @@
 <body>
   <div class="budget-container">
     <div class="app-title">
+      <!-- Display title -->
       <a href="">Budget App</a>
     </div>
     <div class="budget-header">
       <div class="balance">
+        <!-- Display net balance amount -->
         <div class="title">Balance</div>
         <div class="value">$0</div>
       </div>
       <div class="account">
         <div class="income">
+          <!-- Display total income amount -->
           <div class="title">Income</div>
           <div class="income-total">$0</div>
         </div>
-        <div class="chart"></div>
+        <div class="chart"></div> <!-- Display circle chart -->
         <div class="outcome">
+          <!-- Display total outcome amount -->
           <div class="title">Outcome</div>
-          <div class="income-total">$0</div>
+          <div class="outcome-total">$0</div>
         </div>
       </div>
     </div>
+    <div class="budget-dashboard">
+      <div class="dash-title">Dashboard</div>
+      <div class="toggle">
+        <!-- Display "expense", "income", and "all" tabs which user can toggle between -->
+        <div class="tab1">Expenses</div>
+        <div class="tab2">Income</div>
+        <div class="tab3 active">All</div>
+      </div>
+      <div class="hide" id="income">
+        <ul class="list"></ul> <!-- Unordered list for income inputs -->
+        <div class="input">
+          <input type="text" id="income-title-input" name="title" placeholder="Title"> <!-- For user to input income title -->
+          <input type="number" id="income-amount-input" name="amount" placeholder="$0"> <!-- For user to input income amount -->
+          <div class="add-income">Add</div> <!-- For "Add" button -->
+        </div>
+      </div>
+      <div class="hide" id="expense">
+        <ul class="list"></ul> <!-- Unordered list for expense inputs -->
+        <div class="input">
+          <input type="text" id="expense-title-input" name="title" placeholder="Title"> <!-- For user to input expense title -->
+          <input type="number" id="expense-amount-input" name="amount" placeholder="$0"> <!-- For user to input expense amount -->
+          <div class="add-expense">Add</div> <!-- For "Add" button -->
+        </div>
+      </div>
+      <div id="all">
+        <ul class="list"></ul> <!-- Unordered list for all inputs -->
+      </div>
+    </div>
   </div>
+  <script src="chart.js"></script> <!-- Points to external chart JavaScript file -->
+  <script src="app.js"></script> <!-- Points to external app JavaScript file -->
 </body>
 
 </html>
