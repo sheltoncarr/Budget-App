@@ -1,0 +1,95 @@
+body {
+  background-color: #333333;
+  font-family: 'Helvetica';
+}
+
+* {
+  font-family: 'Helvetica';
+}
+
+/* Remove arrows/spinners from number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Budget Container */
+.budget-container {
+  position: absolute;
+  width: 425px;
+  height: 675px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #0055ff;
+}
+
+.budget-container .app-title {
+  margin-top: 45px;
+  text-align: center;
+  font-size: 2em
+}
+
+.budget-container .app-title a {
+  color: white;
+}
+
+/* Budget Header */
+.budget-header {}
+
+.budget-header .balance {
+  margin-top: 30px;
+}
+
+.budget-header .balance .title {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.budget-header .balance .value {
+  color: white;
+  font-size: 2em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.budget-header .account {
+  display: block;
+  width: 310px;
+  margin: 35px auto 0;
+  line-height: 1.7em;
+  text-align: center;
+}
+
+.budget-header .account .income, .chart, .outcome {
+  height: 50px;
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle;
+}
+
+.budget-header .account .income .title {
+  color: white;
+  opacity: 0.7;
+}
+
+.budget-header .account .income .income-total {
+  color: #00ff00;
+}
+
+.budget-header .account .outcome .title {
+  color: white;
+  opacity: 0.7;
+}
+
+.budget-header .account .outcome .outcome-total {
+  color: #ff0000;
+}
